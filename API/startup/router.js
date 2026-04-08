@@ -1,7 +1,10 @@
 const express = require('express');
-const personRoutes = require('../src/routes/person');
+const amigoRoutes = require('../routes/amigoRoutes');
+const jogoRoutes = require('../routes/jogoRoutes');
 
 module.exports = (app) => {
     app.use(express.json());
-    app.use('/api', personRoutes);
+
+    app.use('/api', amigoRoutes);
+    app.use('/api', jogoRoutes);
 };
